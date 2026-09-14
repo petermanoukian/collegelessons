@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Links with Window Open Parameters</title>
+</head>
+<body>
+
+    <h2>Link Opening Methods</h2>
+
+    <!-- 1. Same page -->
+    <p>
+        <a href="https://www.google.com">1. Open Google in Same Page</a>
+    </p>
+
+    <!-- 2. New tab -->
+    <p>
+        <a href="https://www.google.com" target="_blank">2. Open Google in New Window (_blank)</a>
+    </p>
+
+    <!-- 3. JavaScript window.open with width, height, top, and left -->
+    <p>
+        <a href="#" onclick="window.open('https://www.google.com', 'GooglePopup', 'width=600,height=400,top=100,left=200'); return false;">
+            3. Open Google Popup (600x400 at Top:100, Left:200)
+        </a>
+    </p>
+
+</body>
+</html>

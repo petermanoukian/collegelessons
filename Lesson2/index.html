@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Input Form</title>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <!-- The 'action' points to the PHP file that receives data -->
+    <!-- The 'method' defines HOW data is sent (GET vs POST) -->
+    <form action="process.php" method="POST">
+        
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br><br>
+
+        <button type="submit">Submit Form</button>
+
+    </form>
+
+</body>
+</html>

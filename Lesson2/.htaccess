@@ -1,0 +1,2 @@
+# Set the entry point / home file to entry.php
+DirectoryIndex entry.php index.php index.html

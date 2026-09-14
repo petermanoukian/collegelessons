@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 Methods of CSS</title>
+
+    <!-- Method 3: External CSS (Calling css/style.css) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Method 2: Internal CSS (Inside <style> tag in <head>) -->
+    <style>
+        .internal-text {
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Demonstrating 3 Methods of CSS</h2>
+
+    <!-- Method 1: Inline CSS (Directly on the element) -->
+    <p style="color: red; font-size: 20px; font-weight: bold;">
+        1. This text uses Inline CSS (red).
+    </p>
+
+    <!-- Method 2: Internal CSS -->
+    <p class="internal-text">
+        2. This text uses Internal CSS from the head (blue).
+    </p>
+
+    <!-- Method 3: External CSS -->
+    <p class="external-text">
+        3. This text uses External CSS from css/style.css (green).
+    </p>
+
+</body>
+</html>
