@@ -40,3 +40,16 @@ git push origin main
 git add .
 git commit -m "Add Lesson 4"
 git push origin main
+
+
+git checkout -b Lesson4
+git push -u origin Lesson4
+
+git status
+Remove-Module PSReadLine
+
+
+
+git add .
+git commit -m "Add from labtop"
+git push origin test1 

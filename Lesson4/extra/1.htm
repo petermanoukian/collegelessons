@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Hierarchy & Selector Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>CSS Class & ID Hierarchy Guide</h1>
+    </header>
+
+    <main class="content-container">
+
+        <!-- Section 1: Multi-class on a single element (.class1.class2) -->
+        <section class="demo-card">
+            <h2>1. Chained Classes on the Same Element</h2>
+            <p>Targeting <code>.class1.class2</code> applies rules ONLY when an element carries BOTH classes simultaneously.</p>
+            
+            <div class="class1 class2">
+                This element has both <strong>.class1</strong> and <strong>.class2</strong> attached to it directly.
+            </div>
+        </section>
+
+        <!-- Section 2: Descendant Selector (.class3 .class4) -->
+        <section class="demo-card">
+            <h2>2. Tag Inside Tag (Descendant Selector)</h2>
+            <p>Targeting <code>.class3 .class4</code> applies rules ONLY to <code>.class4</code> when it sits inside an element with <code>.class3</code>.</p>
+            
+            <div class="class3">
+                <p>Outer Container (.class3)</p>
+                <div class="class4">
+                    Inner Child (.class4 inside .class3)
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Element + Class Selector (a.class5) -->
+        <section class="demo-card">
+            <h2>3. Element Type combined with Class</h2>
+            <p>Targeting <code>a.class5</code> applies rules strictly to <code>&lt;a&gt;</code> tags containing <code>.class5</code>, beating a generic <code>.class5</code> rule.</p>
+            
+            <p>
+                <a href="#" class="class5">Anchor with .class5</a> | 
+                <span class="class5">Span with .class5 (will not match a.class5)</span>
+            </p>
+        </section>
+
+        <!-- Section 4: Full Specificity Hierarchy -->
+        <section class="demo-card" id="hierarchy-section">
+            <h2>4. ID vs. Class vs. Element Specificity</h2>
+            <p>Demonstrating how ID (<code>#main-link</code>) overrides Class (<code>.class6</code>), which overrides Element (<code>a</code>).</p>
+            
+            <a href="#" id="main-link" class="class6">Hierarchy Test Link</a>
+        </section>
+
+    </main>
+
+</body>
+</html>

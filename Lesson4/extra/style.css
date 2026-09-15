@@ -1,0 +1,117 @@
+/* Base Layout Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.demo-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.demo-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.demo-card code {
+    background: #eef2f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* =======================================================
+   1. MULTI-CLASS SELECTOR (.class1.class2)
+   NO space between dots. Matches element with BOTH classes.
+   ======================================================= */
+.class1 {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.class1.class2 {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+    font-weight: bold;
+}
+
+/* =======================================================
+   2. DESCENDANT SELECTOR (.class3 .class4)
+   SPACE between classes. Matches .class4 INSIDE .class3.
+   ======================================================= */
+.class3 {
+    border: 2px dashed #999;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.class3 .class4 {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* =======================================================
+   3. ELEMENT + CLASS SELECTOR (a.class5)
+   Matches ONLY <a> tags that have class="class5".
+   ======================================================= */
+.class5 {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+a.class5 {
+    color: #e67e22;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* =======================================================
+   4. SPECIFICITY OVERRIDES (ID vs Class vs Element)
+   Hierarchy Weight: ID (100) > Class (10) > Element (1)
+   ======================================================= */
+
+/* Weight: 1 (Element) */
+a {
+    color: #333;
+}
+
+/* Weight: 10 (Class) */
+.class6 {
+    color: #2980b9;
+    font-size: 1.1rem;
+}
+
+/* Weight: 100 (ID) - Wins over .class6 and a */
+#main-link {
+    color: #c0392b;
+    font-weight: bold;
+}

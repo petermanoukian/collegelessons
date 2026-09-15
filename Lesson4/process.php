@@ -9,7 +9,7 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 if ($requestMethod === 'POST' || ($requestMethod === 'GET' && isset($_GET['username']))) {
 
     $inputData = ($requestMethod === 'POST') ? $_POST : $_GET;
-
+   
     // Sanitize input data
     $username   = htmlspecialchars(trim($inputData['username'] ?? ''));
     $firstName  = htmlspecialchars(trim($inputData['firstname'] ?? ''));

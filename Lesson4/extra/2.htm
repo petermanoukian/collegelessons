@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Margin, Padding, Text-Align & Floats Guide</title>
+
+    <style>
+        /* ==========================================================================
+           1. BASE PAGE & TYPOGRAPHY SETTINGS
+           ========================================================================== */
+        * {
+            box-sizing: border-box; /* Ensures padding & borders are included in element width */
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .demo-card {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .demo-card h2 {
+            font-size: 1.25rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 5px;
+        }
+
+        /* Container used to highlight visual boundaries of margin and padding */
+        .box-wrapper {
+            background-color: #ffe0b2; /* Visual indicator for outer spacing / margin background */
+            border: 2px dashed #f57c00;
+            margin-bottom: 15px;
+        }
+
+        .box-content {
+            background-color: #bbdefb; /* Content box color */
+            border: 2px solid #1976d2;  /* Border edge dividing margin from padding */
+            color: #0d47a1;
+            font-weight: bold;
+        }
+
+
+        /* ==========================================================================
+           2. INDIVIDUAL DIRECTIONAL MARGINS vs PADDING
+           ========================================================================== */
+        
+        /* Individual Directional Margins: Moves element away from surrounding elements */
+        .example-margin-individual {
+            margin-top: 20px;
+            margin-right: 40px;
+            margin-bottom: 30px;
+            margin-left: 15px;
+        }
+
+        /* Individual Directional Padding: Creates space INSIDE the element's border */
+        .example-padding-individual {
+            padding-top: 20px;
+            padding-right: 40px;
+            padding-bottom: 30px;
+            padding-left: 15px;
+        }
+
+
+        /* ==========================================================================
+           3. 4-VALUE SHORTHAND SYNTAX (Top Right Bottom Left - TRBL)
+           Order: Clockwise -> 1: Top, 2: Right, 3: Bottom, 4: Left
+           ========================================================================== */
+
+        /* Margin Shorthand: 10px Top, 0 Right, 7px Bottom, 5px Left */
+        .example-margin-shorthand {
+            margin: 10px 0 7px 5px;
+        }
+
+        /* Padding Shorthand: 10px Top, 0 Right, 7px Bottom, 5px Left */
+        .example-padding-shorthand {
+            padding: 10px 0 7px 5px;
+        }
+
+
+        /* ==========================================================================
+           4. MARGIN AUTO & TEXT-ALIGN CENTER
+           ========================================================================== */
+
+        /* Margin Left Auto: Pushes the block element entirely to the RIGHT side */
+        .example-margin-left-auto {
+            width: 50%;
+            margin-left: auto;
+            background-color: #d1c4e9;
+            border: 2px solid #512da8;
+            padding: 10px;
+        }
+
+        /* Block Centering using margin: 0 auto (Requires defined width) */
+        .example-margin-center-block {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #c8e6c9;
+            border: 2px solid #388e3c;
+            padding: 10px;
+        }
+
+        /* Inline Content Alignment inside a container */
+        .example-text-align-center {
+            text-align: center;
+        }
+
+        .example-text-align-right {
+            text-align: right;
+        }
+
+
+        /* ==========================================================================
+           5. FLOATS & CLEARING (float: left / right, clear: left / right / both)
+           ========================================================================== */
+
+        .float-box {
+            width: 150px;
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Float Left: Pulls element to the left edge; inline content wraps on the right */
+        .example-float-left {
+            float: left;
+            background-color: #e91e63;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* Float Right: Pulls element to the right edge; inline content wraps on the left */
+        .example-float-right {
+            float: right;
+            background-color: #9c27b0;
+            margin-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* Clear Left: Forces element below any prior left-floated elements */
+        .example-clear-left {
+            clear: left;
+            background-color: #ffe082;
+            border: 2px solid #ffb300;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* Clear Right: Forces element below any prior right-floated elements */
+        .example-clear-right {
+            clear: right;
+            background-color: #b2dfdb;
+            border: 2px solid #00695c;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* Clear Both: Forces element below ALL floated elements (left or right) */
+        .example-clear-both {
+            clear: both;
+            background-color: #ffccbc;
+            border: 2px solid #d84315;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CSS Spacing, Alignment & Positioning Demo</h1>
+    </header>
+
+    <main>
+
+        <!-- SECTION 1: MARGIN VS PADDING (INDIVIDUAL RULES) -->
+        <section class="demo-card">
+            <h2>1. Individual Directions (Margin vs. Padding)</h2>
+            <p><strong>Dashed Orange Outer Border</strong> = Wrapper boundary. <strong>Blue Border</strong> = Element edge.</p>
+
+            <div class="box-wrapper">
+                <div class="box-content example-margin-individual">
+                    Margin Individual: Moves the box AWAY from outside edges (top:20px, right:40px, bottom:30px, left:15px).
+                </div>
+            </div>
+
+            <div class="box-wrapper">
+                <div class="box-content example-padding-individual">
+                    Padding Individual: Expands space INSIDE the blue border (top:20px, right:40px, bottom:30px, left:15px).
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: 4-VALUE SHORTHAND (10px 0 7px 5px) -->
+        <section class="demo-card">
+            <h2>2. 4-Value Shorthand Rule (10px 0 7px 5px)</h2>
+            <p>Order: <code>Top Right Bottom Left</code> (Clockwise direction).</p>
+
+            <div class="box-wrapper">
+                <div class="box-content example-margin-shorthand">
+                    <code>margin: 10px 0 7px 5px;</code> (Space outside the border).
+                </div>
+            </div>
+
+            <div class="box-wrapper">
+                <div class="box-content example-padding-shorthand">
+                    <code>padding: 10px 0 7px 5px;</code> (Space inside the border).
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: TEXT ALIGNMENT & MARGIN AUTO -->
+        <section class="demo-card">
+            <h2>3. Block Centering vs. Text Alignment</h2>
+
+            <div class="example-margin-left-auto">
+                <strong>margin-left: auto;</strong> — Pushes this entire block to the right edge.
+            </div>
+            <br>
+
+            <div class="example-margin-center-block example-text-align-center">
+                <strong>margin: 0 auto;</strong> — Centers this block box.<br>
+                <strong>text-align: center;</strong> — Centers this inner text.
+            </div>
+            <br>
+
+            <div class="demo-card example-text-align-right">
+                <strong>text-align: right;</strong> — Aligns text content to the right wall without moving the block wrapper.
+            </div>
+        </section>
+
+
+        <!-- SECTION 4: FLOATS & CLEARING RULES -->
+        <section class="demo-card">
+            <h2>4. Floats and Clearing (Float Left/Right & Clear Left/Right/Both)</h2>
+
+            <!-- Float Left Example -->
+            <div class="float-box example-float-left">Float Left</div>
+            <p>This paragraph flows around the left-floated box. The floated box is pushed to the left edge and text flows along its right side.</p>
+            
+            <div class="example-clear-left">
+                <strong>clear: left;</strong> — Clears the left float above, forcing this box to render underneath it.
+            </div>
+
+            <br><hr><br>
+
+            <!-- Float Right Example -->
+            <div class="float-box example-float-right">Float Right</div>
+            <p>This text flows around the right-floated box. The floated box is pushed to the right edge and text flows along its left side.</p>
+
+            <div class="example-clear-right">
+                <strong>clear: right;</strong> — Clears the right float above, placing this element strictly below it.
+            </div>
+
+            <br><hr><br>
+
+            <!-- Both Floats Example -->
+            <div class="float-box example-float-left">Float Left</div>
+            <div class="float-box example-float-right">Float Right</div>
+
+            <div class="example-clear-both">
+                <strong>clear: both;</strong> — Clears both left and right floated boxes simultaneously.
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

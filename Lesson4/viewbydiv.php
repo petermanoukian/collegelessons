@@ -9,7 +9,7 @@ if (isset($_GET['status']) && $_GET['status'] === 'success') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php require_once 'includes/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 <body>
 
     <header>
@@ -35,9 +35,9 @@ if (isset($_GET['status']) && $_GET['status'] === 'success') {
             foreach ($lines as $index => $line) {
                 // Open a new 3-item group wrapper at the start of every 3 items
                 if ($index % 3 === 0) {
-                    if ($index > 0) {
+                    
                         echo '<hr class="divider">';
-                    }
+                    
                     echo '<div class="records-group">';
                 }
 
@@ -59,5 +59,6 @@ if (isset($_GET['status']) && $_GET['status'] === 'success') {
 
     <?php require_once 'includes/footer.php'; ?>
 
+  
 </body>
 </html>
