@@ -49,7 +49,10 @@ git status
 Remove-Module PSReadLine
 
 
-
 git add .
 git commit -m "Add from labtop"
 git push origin test1 
+
+git config --global user.email "thewizard_it@hotmail.com"
+git config --global user.name "petermanoukian"
+
