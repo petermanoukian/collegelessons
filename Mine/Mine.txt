@@ -44,3 +44,12 @@ git push origin main
 
 git checkout -b Lesson4
 git push -u origin Lesson4
+
+git checkout -b frompc
+git add .
+git commit -m "upload from PC"
+git push -u origin frompc 
+
+git add .
+git commit -m "upload from PC - Lesson 5"
+git push -u origin frompc 
