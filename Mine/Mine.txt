@@ -53,3 +53,11 @@ git push -u origin frompc
 git add .
 git commit -m "upload from PC - Lesson 5 Add the Database"
 git push -u origin frompc 
+
+git add .
+git commit -m "upload from PC - Lesson 6 searches"
+git push -u origin frompc 
+
+git add .
+git commit -m "upload from PC - Lesson 6 searches Plus Mine.txt"
+git push -u origin frompc 
