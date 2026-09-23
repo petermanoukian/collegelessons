@@ -1,0 +1,15 @@
+DirectoryIndex formajax.php index.php index.html
+
+RewriteEngine On
+RewriteBase /phplessons/Lesson8/
+
+# Map clean URLs to your existing PHP files
+RewriteRule ^addstudents/?$ formajax.php [L,QSA]
+RewriteRule ^students/?$ viewbydiv.php [L,QSA]
+
+# Redirect direct visits to the old file names to the new clean URLs
+RewriteCond %{THE_REQUEST} \s/phplessons/Lesson8/formajax\.php[\s?] [NC]
+RewriteRule ^formajax\.php$ addstudents [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/phplessons/Lesson8/viewbydiv\.php[\s?] [NC]
+RewriteRule ^viewbydiv\.php$ students [R=301,L]

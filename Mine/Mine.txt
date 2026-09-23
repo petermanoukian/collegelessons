@@ -70,3 +70,8 @@ git push -u origin frompc
 git add .
 git commit -m "upload from PC - Lesson 7 add the latest database"
 git push -u origin frompc 
+
+
+git add .
+git commit -m "Lesson 8"
+git push -u origin frompc 
