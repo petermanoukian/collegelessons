@@ -74,11 +74,19 @@ try {
     ]);
 
     // 3. Attempt to send email via mail()
+// 3. Attempt to send email via mail()
     $mailSent = false;
     try {
         $to = $inputs['email'];
         $subject = "Your Activation Code";
-        $message = "Hello " . htmlspecialchars($inputs['firstName']) . ",\n\nYour activation code is: " . $activationCode;
+        
+        // Build activation link dynamically using SITE_URL
+        $activationLink = SITE_URL . "/activate.php?code=" . $activationCode;
+        
+        $message = "Hello " . htmlspecialchars($inputs['firstName']) . ",\n\n";
+        $message .= "Your activation code is: " . $activationCode . "\n\n";
+        $message .= "Activate your account here: " . $activationLink;
+
         $headers = "From: no-reply@localhost\r\n" .
                    "Reply-To: no-reply@localhost\r\n" .
                    "X-Mailer: PHP/" . phpversion();
@@ -89,7 +97,7 @@ try {
     }
 
     // 4. Set session flash message
-    $msg = "Student created successfully! Activation Code: <strong>{$activationCode}</strong>";
+    $msg = "Student created successfully! Activation Code: $activationCode ";
     if ($mailSent) {
         $msg .= " Activation email sent via local mailer";
     } else {
@@ -97,7 +105,7 @@ try {
     }
     $_SESSION['success'] = $msg;
 
-$codeMessage = urlencode("The activation code is $activationCode Sent Mail " . ($mailSent ? '1' : '0'));
+    $codeMessage = urlencode("The activation code is $activationCode Sent Mail? " . $msg );
     header('Location: ' . BASE_URL . '/students?status=success&method=' . $requestMethod . '&msg=' . $codeMessage);
     exit;
    

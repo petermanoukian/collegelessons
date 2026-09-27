@@ -28,7 +28,7 @@ require_once __DIR__ . '/includes/operations/searchquery.php';
             $methodUsed = htmlspecialchars($_GET['method'] ?? 'POST');
             $msgParam = htmlspecialchars($_GET['msg'] ?? '');
 
-            $statusMessage = "Line 10 Record successfully saved $msgParam";
+            $statusMessage = "Record successfully saved $msgParam";
         
             
         
@@ -38,7 +38,7 @@ require_once __DIR__ . '/includes/operations/searchquery.php';
         <!-- FLASH MESSAGES CONTAINER -->
         <div id="flash-message-container">
             <?php if (!empty($statusMessage)): ?>
-                <div class="alert-success">HERE<?= $statusMessage ?></div>
+                <div class="alert-success"><?= $statusMessage ?></div>
             <?php endif; ?>
 
             <?php if (!empty($errorMessage)): ?>
