@@ -1,0 +1,4 @@
+[POST] user11 | peter hghfhg | Age: 15 | er@wer.lll | Nickname: N/A | Gender: Male | Type: Member | Newsletter: Yes
+[POST] user222 | hgfhg hghfg | Age: 16 | jhhj@wer.llll | Nickname: N/A | Gender: Female | Type: Full Member | Newsletter: Yes
+[POST] user3 | ytyt tyty | Age: 11 | email3@wer.com | Nickname: N/A | Gender: Female | Type: Member | Newsletter: No
+[POST] user4 | 444 4444 | Age: 15 | 4t@mail.yandex | Nickname: nicjeame45566 | Gender: Female | Type: Member | Newsletter: No
