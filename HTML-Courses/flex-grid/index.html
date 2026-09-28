@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Comparison: Floats vs Flexbox vs Grid</title>
+  
+  <style>
+    /* Base Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      color: #333333;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2980b9;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    .box-label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .code-tag {
+      font-family: monospace;
+      font-size: 13px;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    /* ==========================================================================
+       1. CSS FLOATS (LEGACY METHOD)
+       ========================================================================== */
+    .float-container {
+      background-color: #ffffff;
+      border: 2px solid #e67e22;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .float-left-box {
+      float: left;
+      width: 48%; /* Manual width calculation required */
+      background-color: #e67e22;
+      color: #ffffff;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .float-right-box {
+      float: right;
+      width: 48%; /* Manual width calculation required */
+      background-color: #d35400;
+      color: #ffffff;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    /* Clearfix: Prevents parent container from collapsing */
+    .clearfix {
+      clear: both;
+    }
+
+
+    /* ==========================================================================
+       2. CSS FLEXBOX (MODERN 1D METHOD)
+       ========================================================================== */
+    .flex-container {
+      display: flex;             /* Activates Flexbox */
+      gap: 15px;                 /* Sets spacing between items automatically */
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      border: 2px solid #3498db;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .flex-box {
+      flex: 1;                  /* Each item expands evenly to share space */
+      background-color: #3498db;
+      color: #ffffff;
+      padding: 15px;
+      text-align: center;
+    }
+
+
+    /* ==========================================================================
+       3. CSS GRID (MODERN 2D METHOD)
+       ========================================================================== */
+    .grid-container {
+      display: grid;                            /* Activates Grid */
+      grid-template-columns: repeat(3, 1fr);   /* Creates 3 equal columns */
+      gap: 15px;                                /* Sets row and column spacing */
+      background-color: #ffffff;
+      border: 2px solid #2ecc71;
+      padding: 15px;
+    }
+
+    .grid-box {
+      background-color: #2ecc71;
+      color: #ffffff;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Layout Comparison</h1>
+
+  <!-- 1. FLOATS EXAMPLE -->
+  <h2>1. Legacy Method: CSS Floats</h2>
+  <p>Requires explicit percentages for width and a <b>clearfix</b> element so the container doesn't collapse.</p>
+  
+  <div class="float-container">
+    <div class="float-left-box">
+      <div class="box-label">Float Left</div>
+      <span class="code-tag">float: left; width: 48%;</span>
+    </div>
+    <div class="float-right-box">
+      <div class="box-label">Float Right</div>
+      <span class="code-tag">float: right; width: 48%;</span>
+    </div>
+    <!-- Clearfix element to clear float positioning -->
+    <div class="clearfix"></div>
+  </div>
+
+
+  <!-- 2. FLEXBOX EXAMPLE -->
+  <h2>2. Modern Method 1: CSS Flexbox (1-Dimensional)</h2>
+  <p>Items align automatically side-by-side using <code>display: flex</code> and evenly distribute width using <code>flex: 1</code>.</p>
+  
+  <div class="flex-container">
+    <div class="flex-box">
+      <div class="box-label">Flex Box 1</div>
+      <span class="code-tag">display: flex;</span>
+    </div>
+    <div class="flex-box">
+      <div class="box-label">Flex Box 2</div>
+      <span class="code-tag">flex: 1;</span>
+    </div>
+    <div class="flex-box">
+      <div class="box-label">Flex Box 3</div>
+      <span class="code-tag">gap: 15px;</span>
+    </div>
+  </div>
+
+
+  <!-- 3. CSS GRID EXAMPLE -->
+  <h2>3. Modern Method 2: CSS Grid (2-Dimensional)</h2>
+  <p>Columns and rows are defined on the parent container using <code>grid-template-columns</code>.</p>
+  
+  <div class="grid-container">
+    <div class="grid-box">
+      <div class="box-label">Grid Item 1</div>
+      <span class="code-tag">display: grid;</span>
+    </div>
+    <div class="grid-box">
+      <div class="box-label">Grid Item 2</div>
+      <span class="code-tag">grid-template-columns:</span>
+    </div>
+    <div class="grid-box">
+      <div class="box-label">Grid Item 3</div>
+      <span class="code-tag">repeat(3, 1fr);</span>
+    </div>
+  </div>
+
+</body>
+</html>

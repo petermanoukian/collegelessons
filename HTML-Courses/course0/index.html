@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course 0 - Absolute HTML & CSS Basics</title>
+
+  <!-- 1. EXTERNAL CSS LINK -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 2. INTERNAL (EMBEDDED) CSS IN HEAD -->
+  <style>
+    /* Internal CSS styles declared in the head block */
+    .head-styled-box {
+      background-color: #e8f8f5;
+      color: #16a085;
+      border: 2px solid #16a085;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Course 0: HTML & CSS Absolute Basics</h1>
+    <p>A simple guide to learning HTML tags and CSS properties.</p>
+  </header>
+
+  <hr>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main>
+
+    <!-- SECTION 1: TEXT FORMATTING & ALIGNMENT -->
+    <section>
+      <h2>1. Text Formatting & Text Alignment</h2>
+      
+      <p class="text-left"><b>Bold Text:</b> This text is left-aligned using <code>text-align: left</code>.</p>
+      <p class="text-center"><i>Italic Text:</i> This text is centered using <code>text-align: center</code>.</p>
+      <p class="text-right"><u>Underlined Text:</u> This text is right-aligned using <code>text-align: right</code>.</p>
+      <p><s>Strikethrough Text:</s> <s>Old price $50</s> $25</p>
+
+      <!-- 3. INLINE CSS EXAMPLES -->
+      <div style="background-color: #fef9e7; color: #d35400; padding: 10px; border: 1px solid #f39c12; font-family: 'Courier New', monospace;">
+        <b>Inline CSS Example:</b> Styled directly inside the tag using <code>style="..."</code> attribute.
+      </div>
+
+      <div class="head-styled-box">
+        <b>Internal CSS Example:</b> Styled via the <code>&lt;style&gt;</code> tag inside the HTML <code>&lt;head&gt;</code>.
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 2: MARGIN & PADDING DEMO -->
+    <section>
+      <h2>2. Box Model (Margin vs Padding)</h2>
+      <p>Margins add space <b>outside</b> the border. Padding adds space <b>inside</b> the border.</p>
+
+      <div class="box-margin">
+        <b>Box with 20px Margin</b> (Space outside around this box)
+      </div>
+
+      <div class="box-padding">
+        <b>Box with 20px Padding</b> (Space inside around this text)
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 3: LAYOUT COMPARISON (FLOATS vs FLEXBOX vs GRID) -->
+    <section>
+      <h2>3. Layout Comparison: Legacy Floats vs. Modern Flexbox & Grid</h2>
+
+      <div class="full-width-box">
+        <b>100% Width Container:</b> Takes up the full width of its parent element.
+      </div>
+
+      <!-- A. LEGACY FLOAT LAYOUT -->
+      <h3>A. Legacy Method: CSS Floats</h3>
+      <p>Requires setting widths manually and using <code>clear: both</code> to prevent breaking layouts.</p>
+      <div class="float-container">
+        <div class="float-left-box">
+          <b>Float Left</b><br>
+          <code>float: left; width: 48%;</code>
+        </div>
+        <div class="float-right-box">
+          <b>Float Right</b><br>
+          <code>float: right; width: 48%;</code>
+        </div>
+        <!-- Clearfix required for floats -->
+        <div style="clear: both;"></div>
+      </div>
+
+      <!-- B. MODERN FLEXBOX LAYOUT -->
+      <h3>B. Modern Method 1: CSS Flexbox</h3>
+      <p>Flexible 1D layout mode. Elements align side-by-side automatically using <code>display: flex</code>.</p>
+      <div class="flex-container">
+        <div class="flex-box">
+          <b>Flex Box 1</b><br>
+          <code>display: flex</code>
+        </div>
+        <div class="flex-box">
+          <b>Flex Box 2</b><br>
+          <code>flex: 1</code>
+        </div>
+      </div>
+
+      <!-- C. MODERN GRID LAYOUT -->
+      <h3>C. Modern Method 2: CSS Grid</h3>
+      <p>2D grid system. Columns are defined easily using <code>display: grid</code> and <code>grid-template-columns</code>.</p>
+      <div class="grid-container">
+        <div class="grid-box">
+          <b>Grid Item 1</b><br>
+          <code>display: grid</code>
+        </div>
+        <div class="grid-box">
+          <b>Grid Item 2</b><br>
+          <code>1fr 1fr</code>
+        </div>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <!-- SECTION 4: BASIC TABLE -->
+    <section>
+      <h2>4. Basic Data Table</h2>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>Alex Smith</td>
+            <td>11th Grade</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Emma Johnson</td>
+            <td>12th Grade</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 5: BASIC FORM WITH ALL INPUT TYPES -->
+    <section>
+      <h2>5. Basic Registration Form</h2>
+
+      <form action="#" method="POST" enctype="multipart/form-data">
+
+        <!-- Text Input -->
+        <div class="form-field">
+          <label for="username">Username:</label><br>
+          <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-field">
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="student@school.com" required>
+        </div>
+
+        <!-- Select Dropdown -->
+        <div class="form-field">
+          <label for="country">Select Country:</label><br>
+          <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="armenia">Armenia</option>
+          </select>
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-field">
+          <label>Gender:</label><br>
+          <input type="radio" id="male" name="gender" value="male" checked>
+          <label for="male">Male</label>
+          
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-field">
+          <input type="checkbox" id="subscribe" name="subscribe" checked>
+          <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-field">
+          <label for="avatar">Upload Profile Picture:</label><br>
+          <input type="file" id="avatar" name="avatar">
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-field">
+          <label for="bio">Short Bio:</label><br>
+          <textarea id="bio" name="bio" rows="3" placeholder="Write something about yourself..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-button">Submit Form</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 High School Web Development Class — Course 0</p>
+  </footer>
+
+</body>
+</html>

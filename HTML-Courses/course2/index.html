@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport tag to ensure full mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course 2 - Responsive Web Design & File Uploads</title>
+  
+  <!-- Link to external stylesheet in css/ folder -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Web Development Course 2</h1>
+    <p>Responsive Layouts, Textarea & File Uploads</p>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#profile-form">Student Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main>
+
+    <!-- SECTION 1: ABOUT -->
+    <section id="about">
+      <h2>1. Course Overview</h2>
+      <p>Welcome to Course 2! In this lesson, we learn how to make our pages <b>responsive</b> for mobile screens and how to handle <b>file uploads</b> in HTML forms.</p>
+      
+      <article>
+        <h3>What is Responsiveness?</h3>
+        <p>Responsive design allows a website to automatically resize and adapt its layout whether viewed on a <strong>desktop computer</strong>, <strong>tablet</strong>, or <strong>smartphone</strong>.</p>
+      </article>
+    </section>
+
+    <!-- SECTION 2: PROJECTS -->
+    <section id="projects">
+      <h2>2. Featured Class Projects</h2>
+      
+      <div class="card-container">
+        <div class="card">
+          <h3>Project A: Personal Blog</h3>
+          <p>Building a personal blogging layout using semantic HTML5 tags.</p>
+        </div>
+        <div class="card">
+          <h3>Project B: Photo Gallery</h3>
+          <p>Creating responsive image grids that scale on smaller screens.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SCHEDULE TABLE -->
+    <section id="schedule">
+      <h2>3. Course Schedule</h2>
+      <p>Scroll horizontally on mobile devices to view table data:</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Week</th>
+              <th>Topic</th>
+              <th>Assignment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Week 1</td>
+              <td>HTML5 Forms & Inputs</td>
+              <td>Build a Sign-Up Form</td>
+            </tr>
+            <tr>
+              <td>Week 2</td>
+              <td>File Uploads & Enctype</td>
+              <td>Submit Student Profile</td>
+            </tr>
+            <tr>
+              <td>Week 3</td>
+              <td>CSS Media Queries</td>
+              <td>Make Website Mobile Friendly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ENCTYPE MULTIPART FORM WITH FILE & TEXTAREA -->
+    <section id="profile-form">
+      <h2>4. Create Your Student Profile</h2>
+      <p>Complete the form below and upload your avatar or homework file.</p>
+
+      <!-- IMPORTANT: enctype="multipart/form-data" is required when uploading files -->
+      <form action="#" method="POST" enctype="multipart/form-data">
+        
+        <!-- Text Input -->
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="student@school.edu" required>
+        </div>
+
+        <!-- File Upload Input -->
+        <div class="form-group">
+          <label for="profile_pic">Upload Profile Picture (JPG/PNG):</label>
+          <input type="file" id="profile_pic" name="profile_pic" accept="image/*" required>
+        </div>
+
+        <!-- Textarea Input -->
+        <div class="form-group">
+          <label for="bio">Short Bio / About You:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us a little bit about yourself..."></textarea>
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-group">
+          <label>Preferred Track:</label>
+          <div class="radio-group">
+            <input type="radio" id="frontend" name="track" value="frontend" checked>
+            <label for="frontend" class="inline-label">Front-End Development</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" id="backend" name="track" value="backend">
+            <label for="backend" class="inline-label">Back-End Development</label>
+          </div>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms" class="inline-label">I agree to submit my original work.</label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Profile</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 High School Web Development Class — Course 2</p>
+  </footer>
+
+</body>
+</html>

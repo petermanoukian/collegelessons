@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course 3 - CSS Classes, IDs & Text Formatting</title>
+  
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MOVING TEXT (Legacy marquee tag) -->
+  <marquee class="top-banner" behavior="scroll" direction="left">
+    🚀 Welcome to Course 3! Today's Lesson: Class & ID Selectors, Borders, Colors, and Text Styles! 🚀
+  </marquee>
+
+  <!-- HEADER using ID selector -->
+  <header id="main-header">
+    <h1 class="header-title">Web Development Course 3</h1>
+    <p class="header-subtitle">Mastering Classes, IDs, and HTML Text Formatting</p>
+
+    <!-- NAVIGATION using class selector -->
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#formatting" class="nav-link">Text Formatting</a></li>
+        <li class="nav-item"><a href="#scroll-demo" class="nav-link">Scrollbar Box</a></li>
+        <li class="nav-item"><a href="#borders-demo" class="nav-link">Borders & Colors</a></li>
+        <li class="nav-item"><a href="#class-vs-id" class="nav-link">Class vs ID</a></li>
+        <li class="nav-item"><a href="#feedback-form" class="nav-link">Feedback Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main id="content-container">
+
+    <!-- SECTION 1: TEXT FORMATTING TAGS -->
+    <section id="formatting" class="content-section">
+      <h2 class="section-title">1. Rich Text Formatting Tags</h2>
+      <p class="intro-text">
+        HTML provides many built-in tags to format text inside your paragraphs:
+      </p>
+
+      <ul class="format-list">
+        <li><b>Bold Text:</b> <b>This text is bold using &lt;b&gt;</b></li>
+        <li><strong>Strong Importance:</strong> <strong>This is important using &lt;strong&gt;</strong></li>
+        <li><i>Italic Text:</i> <i>This text is italic using &lt;i&gt;</i></li>
+        <li><em>Emphasized Text:</em> <em>This text is emphasized using &lt;em&gt;</em></li>
+        <li><u>Underlined Text:</u> <u>This text is underlined using &lt;u&gt;</u></li>
+        <li><s>Strikethrough (Old Price):</s> <s>$99.99</s> (&lt;s&gt; tag)</li>
+        <li><del>Deleted Text:</del> <del>This feature is removed</del> (&lt;del&gt; tag)</li>
+        <li><mark>Highlighted Text:</mark> <mark>Important note here!</mark> (&lt;mark&gt; tag)</li>
+        <li><span class="blinking-text">Blinking Alert Text!</span> (Created using custom CSS)</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 2: SCROLLABLE DIV WITH CUSTOM SCROLLBAR -->
+    <section id="scroll-demo" class="content-section">
+      <h2 class="section-title">2. Scrollable Box with Custom Scrollbar</h2>
+      <p>This <code>&lt;div&gt;</code> has a fixed height and uses <code>overflow-y: scroll</code> to force scrolling when text overflows:</p>
+
+      <div class="scroll-box">
+        <h3>Class Rules & Regulations (Scroll to read more)</h3>
+        <p><b>Rule 1:</b> Always complete your web development assignments on time.</p>
+        <p><b>Rule 2:</b> Test your code in multiple web browsers to ensure compatibility.</p>
+        <p><b>Rule 3:</b> Always use <code>enctype="multipart/form-data"</code> when sending files in forms.</p>
+        <p><b>Rule 4:</b> Keep your HTML structural tags separate from your CSS design selectors.</p>
+        <p><b>Rule 5:</b> Learn the difference between <code>.class</code> (reusable) and <code>#id</code> (unique).</p>
+        <p><b>Rule 6:</b> Have fun building web applications and experimenting with new CSS properties!</p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BORDERS & BACKGROUND COLORS -->
+    <section id="borders-demo" class="content-section">
+      <h2 class="section-title">3. Border Widths, Styles & Backgrounds</h2>
+      <p>We can style individual elements using <code>.class</code> and <code>#id</code> selectors:</p>
+
+      <div class="box-container">
+        <div id="box-thin" class="demo-box">
+          <h3 class="box-heading">Box 1: Thin Border</h3>
+          <p>Border: <code>1px solid #34495e</code></p>
+          <p>Background: Light Gray</p>
+        </div>
+
+        <div id="box-medium" class="demo-box">
+          <h3 class="box-heading">Box 2: Medium Dashed Border</h3>
+          <p>Border: <code>2px dashed #e67e22</code></p>
+          <p>Background: Soft Yellow</p>
+        </div>
+
+        <div id="box-thick" class="demo-box">
+          <h3 class="box-heading">Box 3: Thick Dotted Border</h3>
+          <p>Border: <code>3px dotted #27ae60</code></p>
+          <p>Background: Mint Green</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CLASS VS ID DEMO -->
+    <section id="class-vs-id" class="content-section">
+      <h2 class="section-title">4. Class vs ID Explanation</h2>
+      
+      <div class="info-card highlight-card">
+        <h3>Class Selector (<code>.class-name</code>)</h3>
+        <p>Can be reused <b>multiple times</b> on the same page. Useful for buttons, cards, and repeated components.</p>
+      </div>
+
+      <div id="unique-card" class="info-card">
+        <h3>ID Selector (<code>#id-name</code>)</h3>
+        <p>Must be <b>unique</b> and used only <b>once</b> per web page. Great for major sections or unique elements.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EXPANDED FORM WITH SELECT, RADIOS & CHECKBOXES -->
+    <section id="feedback-form" class="content-section">
+      <h2 class="section-title">5. Course Registration & Feedback Form</h2>
+      
+      <form id="course-feedback-form" class="custom-form" action="#" method="POST" enctype="multipart/form-data">
+        
+        <!-- Text Input -->
+        <div class="form-row">
+          <label for="student-name" class="form-label">Student Name:</label>
+          <input type="text" id="student-name" name="student_name" class="form-input" placeholder="John Doe" required>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-row">
+          <label for="student-email" class="form-label">Email Address:</label>
+          <input type="email" id="student-email" name="student_email" class="form-input" placeholder="john@example.com" required>
+        </div>
+
+        <!-- Select Dropdown -->
+        <div class="form-row">
+          <label for="grade-level" class="form-label">Grade Level (Select Dropdown):</label>
+          <select id="grade-level" name="grade_level" class="form-select" required>
+            <option value="" disabled selected>-- Select your grade --</option>
+            <option value="freshman">Freshman (9th Grade)</option>
+            <option value="sophomore">Sophomore (10th Grade)</option>
+            <option value="junior">Junior (11th Grade)</option>
+            <option value="senior">Senior (12th Grade)</option>
+          </select>
+        </div>
+
+        <!-- Radio Buttons -->
+        <div class="form-row">
+          <label class="form-label">Preferred Class Experience Level (Radio Buttons):</label>
+          <div class="radio-option">
+            <input type="radio" id="level-beginner" name="experience_level" value="beginner" checked>
+            <label for="level-beginner" class="inline-label">Beginner</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="level-intermediate" name="experience_level" value="intermediate">
+            <label for="level-intermediate" class="inline-label">Intermediate</label>
+          </div>
+          <div class="radio-option">
+            <input type="radio" id="level-advanced" name="experience_level" value="advanced">
+            <label for="level-advanced" class="inline-label">Advanced</label>
+          </div>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="form-row">
+          <label class="form-label">Topics You Want to Learn (Checkboxes):</label>
+          <div class="checkbox-option">
+            <input type="checkbox" id="topic-html" name="topics[]" value="html5" checked>
+            <label for="topic-html" class="inline-label">HTML5 Tags & Structure</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="topic-css" name="topics[]" value="css3" checked>
+            <label for="topic-css" class="inline-label">CSS3 Selectors & Flexbox</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="topic-js" name="topics[]" value="javascript">
+            <label for="topic-js" class="inline-label">JavaScript Basics</label>
+          </div>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-row">
+          <label for="homework-file" class="form-label">Upload Homework Project (File Input):</label>
+          <input type="file" id="homework-file" name="homework_file" class="form-input-file" required>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-row">
+          <label for="comments" class="form-label">Additional Comments (Textarea):</label>
+          <textarea id="comments" name="comments" class="form-textarea" rows="4" placeholder="Type your thoughts about Course 3..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-btn" class="btn-primary">Send Feedback</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="main-footer">
+    <p class="footer-text">&copy; 2026 High School Web Development Class — Course 3</p>
+  </footer>
+
+</body>
+</html>

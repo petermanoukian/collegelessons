@@ -1,0 +1,195 @@
+/* ==========================================================================
+   HTML-Courses\course0\css\style.css
+   Course 0 - Basic CSS Styling Rules with Layout Comparisons
+   ========================================================================== */
+
+/* 1. GLOBAL TYPOGRAPHY & COLORS */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f4f4f4;
+    margin: 20px;
+    padding: 0;
+}
+
+/* Headings */
+h1 {
+    color: #2c3e50;
+}
+
+h2 {
+    color: #2980b9;
+}
+
+h3 {
+    color: #8e44ad;
+    margin-top: 15px;
+}
+
+/* Horizontal Rule Styling */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #cccccc;
+    margin: 20px 0;
+}
+
+/* 2. TEXT ALIGNMENT CLASSES */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* 3. MARGIN VS PADDING EXAMPLES */
+.box-margin {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: 2px solid #c0392b;
+    margin: 20px;
+    padding: 5px;
+}
+
+.box-padding {
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: 2px solid #27ae60;
+    padding: 20px;
+    margin: 5px;
+}
+
+/* 4. LAYOUT COMPARISON STYLES */
+
+/* Full Width Container */
+.full-width-box {
+    width: 100%;
+    background-color: #34495e;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* A. LEGACY FLOATS */
+.float-container {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    margin-bottom: 20px;
+}
+
+.float-left-box {
+    float: left;
+    width: 48%;
+    background-color: #e67e22;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.float-right-box {
+    float: right;
+    width: 48%;
+    background-color: #d35400;
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* B. MODERN FLEXBOX */
+.flex-container {
+    display: flex;
+    gap: 15px; /* Modern spacing between flex items */
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    margin-bottom: 20px;
+}
+
+.flex-box {
+    flex: 1; /* Automatically splits available space evenly */
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* C. MODERN CSS GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Defines two equal columns */
+    gap: 15px; /* Spacing between grid cells */
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
+.grid-box {
+    background-color: #27ae60;
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* 5. BASIC TABLE STYLING */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+/* 6. FORM STYLING */
+form {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #cccccc;
+}
+
+.form-field {
+    margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.submit-button {
+    background-color: #27ae60;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #219150;
+}
+
+/* 7. FOOTER */
+footer {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 14px;
+}

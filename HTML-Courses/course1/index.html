@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport meta tag for modern responsive web design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First HTML5 Website</title>
+  
+  <!-- Link to external stylesheet in the css/ folder -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER: The top banner of your website -->
+  <header>
+    <h1>Welcome to Web Development!</h1>
+    <p>Learning basic HTML5 tags in class.</p>
+
+    <!-- NAVIGATION: Links to different parts of the page -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#contact">Contact Form</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN: The main content area of the web page -->
+  <main>
+
+    <!-- SECTION 1: Introduction -->
+    <section id="about">
+      <h2>1. About Me</h2>
+      <p>Hello! This is a simple <b>HTML5 webpage</b> made to learn how web pages work.</p>
+      
+      <!-- ARTICLE: A standalone piece of content -->
+      <article>
+        <h3>Why I Want to Learn Coding</h3>
+        <p>Coding lets you create <strong>cool projects</strong> on the internet. It is <i>fun</i> and <em>useful</em>!</p>
+        <p>Check out <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a> to read more about technology.</p>
+      </article>
+    </section>
+
+    <!-- SECTION 2: Hobbies using basic Divs -->
+    <section id="hobbies">
+      <h2>2. My Favorite Hobbies</h2>
+      
+      <!-- DIV: A generic container to group items together -->
+      <div class="hobby-box">
+        <h3>Top 3 Hobbies</h3>
+        <ul>
+          <li>Playing Video Games</li>
+          <li>Listening to Music</li>
+          <li>Building Web Pages</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Simple Table -->
+    <section id="schedule">
+      <h2>3. Weekly Class Schedule</h2>
+      <p>Here is a basic table showing my school routine:</p>
+
+      <!-- TABLE: Used to display data in rows and columns -->
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Subject</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Computer Science</td>
+            <td>9:00 AM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Web Design</td>
+            <td>10:30 AM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Coding Lab</td>
+            <td>1:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION 4: Contact Form -->
+    <section id="contact">
+      <h2>4. Sign Up / Contact Form</h2>
+      <p>Fill out the form below to join the class list:</p>
+
+      <!-- FORM: Used to gather input from users -->
+      <form action="#" method="POST">
+        
+        <!-- Text Input -->
+        <p>
+          <label for="fullname">Full Name:</label><br>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+        </p>
+
+        <!-- Email Input -->
+        <p>
+          <label for="email">Email Address:</label><br>
+          <input type="email" id="email" name="email" placeholder="student@school.edu" required>
+        </p>
+
+        <!-- Radio Buttons -->
+        <p>
+          <strong>Grade Level:</strong><br>
+          <input type="radio" id="junior" name="grade" value="junior" checked>
+          <label for="junior">Junior (11th)</label><br>
+
+          <input type="radio" id="senior" name="grade" value="senior">
+          <label for="senior">Senior (12th)</label>
+        </p>
+
+        <!-- Checkbox -->
+        <p>
+          <input type="checkbox" id="newsletter" name="newsletter" checked>
+          <label for="newsletter">I want to receive class announcements.</label>
+        </p>
+
+        <!-- Submit Button -->
+        <p>
+          <button type="submit">Submit Info</button>
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: Bottom section with copyright info -->
+  <footer>
+    <hr>
+    <p>&copy; 2026 High School Web Development Class. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
